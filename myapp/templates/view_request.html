@@ -1,0 +1,29 @@
+<h1 id="logo">ERRANDY</h1>
+{% extends "index.html" %} {% block title %}view-Request{% endblock %} {% block content %}
+<div class="container">
+  <h2>Request Details</h2>
+  <!-- This allows users view requested errands, if they are the one that posted it, they will be only allowed to delete -->
+  <div class="errand-details">
+      <p><strong>Title:</strong> {{ request.title }}</p>
+      <p><strong>Description:</strong> {{ request.description }}</p>
+      <p><strong>Requested by:</strong> {{ request.user.username }}</p>
+      <p><strong>Requester Mail:</strong> {{ request.user.email }}</p>
+  </div>
+  <div class="request-buttons">
+      <!-- Display the message button only if the current user is the responder -->
+      {% if current_user.is_authenticated and request.user.id != current_user.id %}
+      <form action="/message/{{ request.id }}" method="post">
+        <input type="hidden" name="requester_email" value="{{ request.user.email }}">
+          <button type="submit" class="message-btn">Message</button>
+      </form>
+      {% endif %}
+      <!-- Delete Form -->
+      {% if current_user.is_authenticated and request.user.id == current_user.id %}
+      <form action="/delete/{{ request.id }}" method="post">
+          <button type="submit" class="delete-btn">Delete</button>
+      </form>
+      {% endif %}
+  </div>
+</div>
+
+{% endblock %}

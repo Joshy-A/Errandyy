@@ -1,0 +1,200 @@
+/*
+styles for common templates
+*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+body {
+    background-color: #f1ecec;
+}
+
+.container {
+    margin: 50px auto;
+    max-width: 500px;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    border-radius: 20px;
+}
+
+.request-container {
+    margin: 0.88% 0 0 1.5%;   
+}
+
+#logo {
+    text-align: left;
+    font-weight: bolder;
+    font-size: 36px;
+    margin-left: 25px;
+    margin-top: 10px;
+    background-image: linear-gradient(45deg, #05728f 0%, #8884ff 46%);
+    -webkit-background-clip: text;
+    color: transparent;
+    padding-bottom: 10px;
+}
+
+#logo-container {
+    background-color: #efdddd;
+    width: 100%;
+    height: 65px;
+    position: relative;
+    padding-bottom: 0.88%;
+    padding-top: 0.45%;
+    margin-top: -0.88%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 33px;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+input[type="name"],
+input[type="email"],
+input[type="password"] {
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+}
+
+.btn {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    background-image: linear-gradient(45deg, #05728f 0%, #8884ff 100%);
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+}
+
+.btn:hover,
+.create-errand-form button:hover {
+    background-image: linear-gradient(45deg, #8884ff 0%, #05728f 100%); 
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.create-errand-form {
+    display: none;
+    width: 23.79%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 5px;
+    background-color: #fff;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+}
+
+.create-errand-form input,
+.create-errand-form button {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.create-errand-form button {
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    background-image: linear-gradient(45deg, #05728f 0%, #8884ff 46%);
+}
+
+.errand-container .errand-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.errand-container .errand-card {
+    border: 1px solid #ccc;
+    margin: 5px;
+    padding: 10px;
+    background-color: #fff;
+    width: 23.79%;
+}
+
+.errand-container .errand-card:hover {
+    background-color: #f0f0f0;
+}
+
+.errand-container {
+    margin-top: 20px;
+}
+
+.errand-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px;
+    display: block;
+}
+
+.errand-name {
+    margin-left: 5px;
+}
+
+.respond-btn {
+    display: block;
+}
+
+.add-button {
+    cursor: pointer;
+}
+
+.errand-card {
+    border-radius: 10px;
+}
+
+.request-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.message-btn,
+.delete-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.message-btn {
+    color: #fff;
+    background-image: linear-gradient(45deg, #05728f 0%, #8884ff 46%);
+}
+
+.message-btn:hover {
+    background-image: linear-gradient(45deg, #8884ff 0%, #05728f 100%);
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}

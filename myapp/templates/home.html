@@ -1,0 +1,38 @@
+<div id="logo-container">
+  <h1 id="logo">ERRANDY</h1>
+</div>
+{% extends "index.html" %} {% block title %}Home{% endblock %} {% block content
+  %}
+  <div class="request-container">
+    <div class="errand-container">
+      <div class="errand-grid">
+        {% for request in requests %}
+          <div class="errand-card">
+            
+            <span class="errand-name">{{ request.user.username }}</span>
+            <span class="errand-title">{{ request.title }}</span>
+
+            <!-- <form action="/view-request/{{ request.id }}" method="post" style="display: center;" id="">
+            </form> -->
+          
+            <a href='/view-request/{{ request.id }}' class="view-request-btn"><button class="message-btn">View request</button></a>
+
+            <!-- <a class="message-btn" href="#" onclick="sendMessage({{ request.id }})">View request</a> -->
+            
+            
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <!-- This form allows users to post errands on the application -->
+    <form action="/create" method="post" class="create-errand-form" id="create-errand-form">
+      <input type="text" name="title" placeholder="Errand location">
+      <input type="text" name="description" placeholder="Errand description">
+      <button type="submit">Post Errand</button>
+    </form>
+    
+    <img class="add-button" onclick="hideShow()" src="../static/add-button.svg" alt="add button"/>
+    <script src="../static/script.js"></script>
+  </div>
+
+  {% endblock %}
